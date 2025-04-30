@@ -15,6 +15,8 @@ import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextPane;
+import java.awt.SystemColor;
 
 public class User_information extends JFrame {
 
@@ -53,23 +55,23 @@ public class User_information extends JFrame {
 		contentPane.setLayout(null);
 		
 		t = new JTextField();
-		t.setBounds(152, 22, 149, 20);
+		t.setBounds(152, 58, 149, 20);
 		contentPane.add(t);
 		t.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("File Name");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel.setBounds(62, 25, 80, 14);
+		lblNewLabel.setBounds(62, 61, 80, 14);
 		contentPane.add(lblNewLabel);
 		
 		t1 = new JTextField();
-		t1.setBounds(152, 63, 206, 20);
+		t1.setBounds(152, 95, 206, 20);
 		contentPane.add(t1);
 		t1.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Enter");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1.setBounds(62, 63, 64, 20);
+		lblNewLabel_1.setBounds(62, 95, 64, 20);
 		contentPane.add(lblNewLabel_1);
 		
 		JButton btnNewButton = new JButton("Create\r\n");
@@ -88,7 +90,7 @@ public class User_information extends JFrame {
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnNewButton.setBounds(62, 112, 89, 23);
+		btnNewButton.setBounds(48, 144, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Write\r\n");
@@ -107,7 +109,7 @@ public class User_information extends JFrame {
 			}
 		});
 		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnNewButton_1.setBounds(176, 112, 89, 23);
+		btnNewButton_1.setBounds(162, 144, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Read");
@@ -130,7 +132,7 @@ public class User_information extends JFrame {
 			}
 		});
 		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnNewButton_2.setBounds(300, 112, 89, 23);
+		btnNewButton_2.setBounds(286, 144, 89, 23);
 		contentPane.add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("Update");
@@ -154,7 +156,7 @@ public class User_information extends JFrame {
 			}
 		});
 		btnNewButton_3.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnNewButton_3.setBounds(118, 146, 89, 23);
+		btnNewButton_3.setBounds(104, 178, 89, 23);
 		contentPane.add(btnNewButton_3);
 		
 		JButton btnNewButton_4 = new JButton("Delete");
@@ -173,7 +175,16 @@ public class User_information extends JFrame {
 			}
 		});
 		btnNewButton_4.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnNewButton_4.setBounds(247, 146, 89, 23);
+		btnNewButton_4.setBounds(233, 178, 89, 23);
 		contentPane.add(btnNewButton_4);
+		
+		JTextPane txtpnFileHandling = new JTextPane();
+		txtpnFileHandling.setEnabled(false);
+		txtpnFileHandling.setBackground(SystemColor.menu);
+		txtpnFileHandling.setFont(new Font("Arial Rounded MT Bold", Font.PLAIN, 16));
+		txtpnFileHandling.setText("       File Handling");
+		txtpnFileHandling.setEditable(false);
+		txtpnFileHandling.setBounds(135, 10, 166, 38);
+		contentPane.add(txtpnFileHandling);
 	}
 }
